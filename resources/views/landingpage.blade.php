@@ -30,7 +30,7 @@
                 <a class="px-4" href="#services">Services</a>
             </div>
             <div class="hidden md:block">
-                <a href="/login" type="button"
+                <a href="/register" type="button"
                     class=" py-3 px-8 text-sm bg-teal-500 hover:bg-teal-600 rounded text-white ">Start Now
                 </a>
             </div>
