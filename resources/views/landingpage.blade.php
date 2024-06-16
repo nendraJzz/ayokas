@@ -8,21 +8,14 @@
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-<div class="overflow-x-hidden">
+<div class="overflow-x-hidden font-inter">
     <header class="sticky top-0 bg-white shadow">
-        <div class="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
-            <div class="flex items-center text-2xl">
-                <div class="w-12 mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-                        <path fill="#BEE3F8" d="M44,7L4,23l40,16l-7-16L44,7z M36,23H17l18-7l1,6V23z"></path>
-                        <path fill="#3182CE"
-                            d="M40.212,10.669l-5.044,11.529L34.817,23l0.351,0.802l5.044,11.529L9.385,23L40.212,10.669 M44,7L4,23 l40,16l-7-16L44,7L44,7z">
-                        </path>
-                        <path fill="#3182CE"
-                            d="M36,22l-1-6l-18,7l17,7l-2-5l-8-2h12V22z M27.661,21l5.771-2.244L33.806,21H27.661z">
-                        </path>
-                    </svg>
-                </div>Ayokas
+        <div class="container flex flex-col sm:flex-row justify-between items-center mx-auto py-3 px-8">
+            <div class="flex items-center text-xl">
+                <div class="gap-3 flex justify-center items-center">
+                    <x-application-logo/>
+                    <h1 class="font-bold">Ayokas</h1>
+                </div>
             </div>
             <div class="flex mt-4 sm:mt-0">
                 <a class="px-4" href="#">Home</a>
@@ -37,11 +30,11 @@
         </div>
     </header>
 
-    <main class="text-gray-900">
+    <main class="text-gray-900 px-3 lg:px-40">
         <section class="pt-20 md:pt-40">
             <div class="container mx-auto px-8 lg:flex">
                 <div class="text-center lg:text-left lg:w-1/2">
-                    <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">Solusi Terbaik untuk Kebutuhan Siswa</h1>
+                    <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none tracking-tight">Solusi Terbaik untuk Kebutuhan Siswa</h1>
                     <p class="text-xl lg:text-2xl mt-6 font-light">Pengelolaan Data Kas Siswa
                         "Solusi Terbaik untuk Manajemen Keuangan Kelas"
                     </p>
