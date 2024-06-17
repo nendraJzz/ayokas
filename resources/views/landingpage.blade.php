@@ -6,6 +6,9 @@
   @vite('resources/css/app.css')
   <title>Ayokas — Home</title>
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+  {{-- icon --}}
+  <link rel="icon" href="{{ asset('svg/logo.svg') }}">
 </head>
 <body>
 <div class="overflow-x-hidden font-inter">
