@@ -1,12 +1,13 @@
-<nav x-data="{ open: false }" class="bg-teal-500 fixed w-full">
+<nav x-data="{ open: false }" class="bg-white shadow-md fixed w-full">
     <!-- Primary Navigation Menu -->
     <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="/">
+                    <a href="/dashboard" class="flex items-center">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                        <p class="uppercase ml-2 font-bold">Ayokas Dashboard</p>
                     </a>
                 </div>
             </div>
@@ -72,11 +73,15 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('dashboard.datasiswa')" :active="request()->routeIs('dashboard.datasiswa')">
+                {{ __('Data Siswa') }}
+            </x-responsive-nav-link>
             
+            <x-responsive-nav-link :href="route('dashboard.pay')" :active="request()->routeIs('dashboard.pay')">
+                {{ __('Bayar') }}
+            </x-responsive-nav-link>
             <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('dashboard.pay')" :active="request()->routeIs('dashboard.pay')">
-                    {{ __('Bayar') }}
-                </x-responsive-nav-link>
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">

@@ -36,22 +36,36 @@
             <!-- Page Content -->
             <main class="flex">
                 <!-- Sidebar -->
-                <div class="bg-gray-800 text-white w-64 space-y-6 py-7 px-5 h-screen hidden lg:block">
+                <div class="bg-white shadow-md  text-black w-64 space-y-6 py-7 px-5 h-screen hidden lg:block">
                     <nav class="mt-20">
                         
                         <!-- Link Dashboard -->
                         <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                            {{ __('Dashboard') }}
+                            <div class="flex items-center">
+                                <x-svg-dashboard />
+                                <p class="ml-2">{{ __('Dashboard') }}</p>            
+                            </div>
                         </x-responsive-nav-link>
 
-                        <!-- Link Dashboard -->
+                        <!-- Link Datasiswa -->
+                        <x-responsive-nav-link :href="route('dashboard.datasiswa')" :active="request()->routeIs('dashboard.datasiswa')">
+                            <div class="flex items-center">
+                                {{-- <x-svg-people-group /> --}}
+                                <p class="ml-2">{{ __('Data Siswa') }}</p>            
+                            </div>
+                        </x-responsive-nav-link>
+
+                        <!-- Link Bayar -->
                         <x-responsive-nav-link :href="route('dashboard.pay')" :active="request()->routeIs('dashboard.pay')">
-                            {{ __('Bayar') }}
+                            <div class="flex items-center">
+                                {{-- <x-svg-payment /> --}}
+                                <p class="ml-2">{{ __('Bayar') }}</p>            
+                            </div>
                         </x-responsive-nav-link>
         
                        <form method="POST" action="{{ route('logout') }}" x-data>
                             @csrf
-                            <a href="{{ route('logout') }}" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white"
+                            <a href="{{ route('logout') }}" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-teal-300 hover:text-white"
                                @click.prevent="$root.submit();">
                                 Logout
                             </a>

@@ -30,7 +30,7 @@
         </div>
     </header>
 
-    <main class="text-gray-900 px-3 lg:px-40">
+    <main class="text-gray-900">
         <section class="pt-20 md:pt-40">
             <div class="container mx-auto px-8 lg:flex">
                 <div class="text-center lg:text-left lg:w-1/2">
@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="lg:w-1/2 pt-6 lg:pt-0">
-                    <x-svg-interface />
+                    <x-svg-interface class="w-12 mr-3"/>
                 </div>
             </div>
         </section>

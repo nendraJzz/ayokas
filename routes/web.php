@@ -11,6 +11,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/dashboard/datasiswa', function () {
+    return view('datasiswa');
+})->middleware(['auth', 'verified'])->name('dashboard.datasiswa');
+
 Route::get('/dashboard/pay', function () {
     return view('paypage');
 })->middleware(['auth', 'verified'])->name('dashboard.pay');
