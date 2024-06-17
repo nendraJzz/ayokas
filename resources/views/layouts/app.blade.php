@@ -11,10 +11,12 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
+    <body>
         <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
 
@@ -32,5 +34,5 @@
                 {{ $slot }}
             </main>
         </div>
-    </body>
+    </body> 
 </html>
