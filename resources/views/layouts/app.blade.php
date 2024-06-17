@@ -42,7 +42,7 @@
                         <!-- Link Dashboard -->
                         <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                             <div class="flex items-center">
-                                <x-svg-dashboard />
+                                <img src="/svg/dashboard.svg" alt="dashboard icon" class="w-6 h-6 mr-2">
                                 <p class="ml-2">{{ __('Dashboard') }}</p>            
                             </div>
                         </x-responsive-nav-link>
@@ -50,7 +50,7 @@
                         <!-- Link Datasiswa -->
                         <x-responsive-nav-link :href="route('dashboard.datasiswa')" :active="request()->routeIs('dashboard.datasiswa')">
                             <div class="flex items-center">
-                                {{-- <x-svg-people-group /> --}}
+                                <img src="/svg/data.svg" alt="data siswa icon" class="w-6 h-6 mr-2">
                                 <p class="ml-2">{{ __('Data Siswa') }}</p>            
                             </div>
                         </x-responsive-nav-link>
@@ -58,7 +58,7 @@
                         <!-- Link Bayar -->
                         <x-responsive-nav-link :href="route('dashboard.pay')" :active="request()->routeIs('dashboard.pay')">
                             <div class="flex items-center">
-                                {{-- <x-svg-payment /> --}}
+                                <img src="/svg/pay.svg" alt="bayar icon" class="w-6 h-6 mr-2">
                                 <p class="ml-2">{{ __('Bayar') }}</p>            
                             </div>
                         </x-responsive-nav-link>

@@ -1,13 +1,11 @@
 <x-app-layout>
-    {{-- <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot> --}}
 
     <div class="py-12 px-6">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <h1 class="mb-5">Dashboard</h1>
+            <div class="flex items-center mb-5">
+                <img src="/svg/dashboard.svg" alt="dashboard icon" class="w-6 h-6 mr-2">
+                <p class="ml-2 font-semibold text-xl">Dashboard</p>            
+            </div>
             <div class="flex gap-5 flex-col lg:flex-row">
                 <x-card>
                     <p>{{ __("Jumlah Uang Saat Ini") }}</p>
