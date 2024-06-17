@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Dashboard') }}</title>
+
+        <!-- Icons -->
+        <link rel="icon" href="{{ asset('svg/logo.svg') }}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -29,9 +32,38 @@
                 </header>
             @endisset
 
+            
             <!-- Page Content -->
-            <main>
-                {{ $slot }}
+            <main class="flex">
+                <!-- Sidebar -->
+                <div class="bg-gray-800 text-white w-64 space-y-6 py-7 px-5 h-screen hidden lg:block">
+                    <nav class="mt-20">
+                        
+                        <!-- Link Dashboard -->
+                        <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-responsive-nav-link>
+
+                        <!-- Link Dashboard -->
+                        <x-responsive-nav-link :href="route('dashboard.pay')" :active="request()->routeIs('dashboard.pay')">
+                            {{ __('Bayar') }}
+                        </x-responsive-nav-link>
+        
+                       <form method="POST" action="{{ route('logout') }}" x-data>
+                            @csrf
+                            <a href="{{ route('logout') }}" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white"
+                               @click.prevent="$root.submit();">
+                                Logout
+                            </a>
+                        </form>      
+                    </nav>
+                </div>
+                
+                
+                <!-- Main Content -->
+                <div class="w-full mt-20">
+                    {{ $slot }}
+                </div>
             </main>
         </div>
     </body> 
