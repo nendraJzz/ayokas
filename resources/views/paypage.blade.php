@@ -8,19 +8,19 @@
                         <div class="grid grid-cols-2 gap-6">
                             <div class="col-span-2 sm:col-span-1">
                                 <label for="card-number" class="block text-sm font-medium text-gray-700 mb-2">Nama</label>
-                                <input type="text" name="jumlahkas" placeholder="Nama Kamu" class="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500">
+                                <input type="text" name="jumlahkas" placeholder="Nama Kamu" class="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" required/>
                             </div>
                             <div class="col-span-2 sm:col-span-1">
                                 <label for="expiration-date" class="block text-sm font-medium text-gray-700 mb-2">Nis</label>
-                                <input type="text" name="nis" placeholder="1212121" class="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500">
+                                <input type="text" name="nis" placeholder="1212121" class="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" required/>
                             </div>
                             <div class="col-span-2 sm:col-span-1">
                                 <label for="expiration-date" class="block text-sm font-medium text-gray-700 mb-2">Kelas</label>
-                                <input type="text" name="jumlahkas" placeholder="XI Example" class="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500">
+                                <input type="text" name="jumlahkas" placeholder="XI Example" class="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" required/>
                             </div>
                             <div class="col-span-2 sm:col-span-1">
                                 <label for="expiration-date" class="block text-sm font-medium text-gray-700 mb-2">Jumlah Kas</label>
-                                <input type="text" name="jumlahkas" placeholder="10000" class="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500">
+                                <input type="text" name="jumlahkas" placeholder="10000" class="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" required/>
                             </div>
                         </div>
                         <div class="mt-8">
