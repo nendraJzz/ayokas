@@ -36,7 +36,7 @@
             <!-- Page Content -->
             <main class="flex">
                 <!-- Sidebar -->
-                <div class="bg-white shadow-md  text-black w-64 space-y-6 py-7 px-5 h-screen hidden lg:block">
+                <div class="bg-white shadow-md text-black w-64 space-y-6 py-7 px-5 h-screen hidden lg:block">
                     <nav class="mt-20">
                         
                         <!-- Link Dashboard -->
@@ -59,13 +59,13 @@
                         <x-responsive-nav-link :href="route('dashboard.pay')" :active="request()->routeIs('dashboard.pay')">
                             <div class="flex items-center">
                                 <img src="/svg/pay.svg" alt="bayar icon" class="w-6 h-6 mr-2">
-                                <p class="ml-2">{{ __('Bayar') }}</p>            
+                                <p class="ml-2">{{ __('Bayar Kas') }}</p>            
                             </div>
                         </x-responsive-nav-link>
         
                        <form method="POST" action="{{ route('logout') }}" x-data>
                             @csrf
-                            <a href="{{ route('logout') }}" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-teal-300 hover:text-white"
+                            <a href="{{ route('logout') }}" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-500 hover:text-white"
                                @click.prevent="$root.submit();">
                                 Logout
                             </a>
@@ -80,5 +80,10 @@
                 </div>
             </main>
         </div>
+        <footer class="text-gray-500 mt-4 fixed bottom-3 w-full">
+            <div class="container mx-auto text-center">
+                <p class="text-xs md:text-sm">&copy; 2024. XI RPL CERIA</p>
+            </div>
+        </footer>
     </body> 
 </html>
