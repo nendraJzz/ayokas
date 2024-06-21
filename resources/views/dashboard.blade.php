@@ -8,16 +8,16 @@
             </div>
             <div class="flex gap-5 flex-col lg:flex-row">
                 <x-card>
-                    <p>{{ __("Jumlah Uang Saat Ini") }}</p>
-                    <h3 class="font-extrabold text-3xl mt-3">Rp. 150.000</h3>
+                    <p>{{ __("Jumlah Uang Saat Ini (Rupiah)") }}</p>
+                    <h3 class="font-extrabold text-3xl mt-3">{{ number_format($sum , 0, ',', '.')}}</h3>
                 </x-card>
                 <x-card className="hidden md:block">
-                    <p>{{ __("Jumlah Uang Saat Ini") }}</p>
-                    <h3 class="font-extrabold text-3xl mt-3">Rp. 150.000</h3>
+                    <p>{{ __("Jumlah Uang Masuk (Rupiah)") }}</p>
+                    <h3 class="font-extrabold text-3xl mt-3">150.000</h3>
                 </x-card>
                 <x-card className="hidden md:block">
-                    <p>{{ __("Jumlah Uang Saat Ini") }}</p>
-                    <h3 class="font-extrabold text-3xl mt-3">Rp. 150.000</h3>
+                    <p>{{ __("Jumlah Uang Keluar (Rupiah)") }}</p>
+                    <h3 class="font-extrabold text-3xl mt-3">150.000</h3>
                 </x-card>
                 <div class="flex gap-3 lg:hidden">
                     <x-card>

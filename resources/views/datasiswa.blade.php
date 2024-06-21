@@ -29,86 +29,29 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($data as $item)
+
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td class="w-4 p-4">
                             </td>
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Danendra Shidiq Abdillah
+                                {{ $item->name }}
                             </th>
                             <td class="px-6 py-4">
-                                2214225
+                                {{ $item->nis }}
                             </td>
                             <td class="px-6 py-4">
-                                XI RPL
+                                {{ $item->class }}
                             </td>
                             <td class="px-6 py-4">
-                                Rp.2000
+                                Rp. {{ $item->amount }}
                             </td>
                             <td class="flex items-center px-6 py-4">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Delete</a>
+                                <x-modal-form id="{{ $item->id }}" name="{{ $item->name }}" nis="{{ $item->nis }}" class="{{ $item->class }}" amount="{{ $item->amount }}" action="/user/update/{{ $item->id }}"></x-modal-form>
+                                <a href="/user/delete/{{ $item->id }}" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Delete</a>
                             </td>
                         </tr>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <td class="w-4 p-4">
-                            </td>
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Danendra Shidiq Abdillah
-                            </th>
-                            <td class="px-6 py-4">
-                                2214225
-                            </td>
-                            <td class="px-6 py-4">
-                                XI RPL
-                            </td>
-                            <td class="px-6 py-4">
-                                Rp.2000
-                            </td>
-                            <td class="flex items-center px-6 py-4">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Delete</a>
-                            </td>
-                        </tr>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <td class="w-4 p-4">
-                            </td>
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Danendra Shidiq Abdillah
-                            </th>
-                            <td class="px-6 py-4">
-                                2214225
-                            </td>
-                            <td class="px-6 py-4">
-                                XI RPL
-                            </td>
-                            <td class="px-6 py-4">
-                                Rp.2000
-                            </td>
-                            <td class="flex items-center px-6 py-4">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Delete</a>
-                            </td>
-                        </tr>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <td class="w-4 p-4">
-                            </td>
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Danendra Shidiq Abdillah
-                            </th>
-                            <td class="px-6 py-4">
-                                2214225
-                            </td>
-                            <td class="px-6 py-4">
-                                XI RPL
-                            </td>
-                            <td class="px-6 py-4">
-                                Rp.2000
-                            </td>
-                            <td class="flex items-center px-6 py-4">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Delete</a>
-                            </td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

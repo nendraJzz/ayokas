@@ -13,7 +13,7 @@
 <body>
 <div class="overflow-x-hidden font-inter">
     <header class="sticky top-0 bg-white shadow">
-        <div class="container flex flex-col sm:flex-row justify-between items-center mx-auto py-3 px-8">
+        <div class="container flex flex-col sm:flex-row justify-between items-center mx-auto py-3 px-24">
             <div class="flex items-center text-xl">
                 <div class="gap-3 flex justify-center items-center">
                     <x-application-logo/>
@@ -33,7 +33,7 @@
         </div>
     </header>
 
-    <main class="text-gray-900">
+    <main class="text-gray-900 px-24">
         <section class="pt-20 md:pt-40">
             <div class="container mx-auto px-8 lg:flex">
                 <div class="text-center lg:text-left lg:w-1/2">
@@ -129,6 +129,7 @@
                 </div>
             </div>
         </section>
+    </main>
 
     <x-footer />
 
