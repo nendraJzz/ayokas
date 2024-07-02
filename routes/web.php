@@ -14,7 +14,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/dashboard/datasiswa', function () {
-    return view('datasiswa', ['data' => Student::all()]);
+    return view('datasiswa', ['data' => Student::orderBy('nis', 'asc')->paginate(2)]);
 })->middleware(['auth', 'verified'])->name('dashboard.datasiswa');
 
 Route::get('/dashboard/pay', function () {

@@ -55,6 +55,9 @@
                     </tbody>
                 </table>
             </div>
+            <div class="mt-4 mx-10">
+                {{ $data->links('pagination::tailwind') }}
+            </div>
         </div>
     </div>
 </x-app-layout>
